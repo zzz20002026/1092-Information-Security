@@ -20,7 +20,7 @@ class Crypt:
         msgLen = len(msgList)
         cipherTxst = [''] * msgLen
         for i in range(msgLen):
-            cipherTxst[i] = chr ( ord( msgList[i]) ^ ord( keyList[ i % keyLen]))
+            cipherTxst[i] = chr(ord(msgList[i]) ^ ord(keyList[i%keyLen]))
         return ''.join(cipherTxst)
 
 if __name__ == '__main__':
